@@ -16,7 +16,6 @@
     "text-processing"
   ],
   "dependencies": {
-    "jsonfile": "6.1.0",
     "words-n-numbers": "4.0.2"
   },
   "author": "Espen Klem",

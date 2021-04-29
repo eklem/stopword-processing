@@ -2,7 +2,7 @@
 Misc tools for processing different text sources, preparing to create stopword lists for different languages.
 
 ## create nd-json from Wolaytta text files
-To process with stopword-trainer.
+End result is to be processed with [`stopword-trainer`](https://github.com/eklem/stopword-trainer) to create a stopword list.
 
 ### Usage
 Fork project

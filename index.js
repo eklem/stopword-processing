@@ -1,7 +1,7 @@
 const fs = require('fs')
 const wnn = require('words-n-numbers')
 const path = './docs-wolaytta'
-let docs = []
+const docs = []
 
 // console.log(textFiles)
 // No triggering streaming function, just do it simple and see if it is enough
@@ -16,23 +16,25 @@ fs.readdir(path, { withFileTypes: true }, (err, files) => {
     console.error(err)
     return
   }
+
+  //   b: read all files
   files.forEach(file => {
     const filePath = path + '/' + file.name
     console.log(filePath)
-
-    //   b: read all files
     readFile(path + '/' + file.name)
   })
-  console.log(JSON.stringify(docs))
+
+  //   c: process to chunks (extract words and create chunks)
+  processDocs(docs)
 })
 
 function readFile (filePath) {
   const data = fs.readFileSync(filePath, { encoding: 'utf8', flag: 'r' })
-  // console.log(data)
+  // populate docs array for processing
   docs.push(data)
-  // need to push to array docs
 }
 
-function processFiles () {
+function processDocs (docs) {
   // some wnn-stuff
+  console.log(JSON.stringify(docs))
 }
